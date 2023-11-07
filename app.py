@@ -1,3 +1,4 @@
+
 from flask import Flask, render_template, request
 import numpy as np
 import pickle
@@ -18,6 +19,6 @@ def predict():
     normal_nucleoli= request.form['normal_nucleoli']
     pred = model.predict(np.array([[uniformity_cell_size, uniformity_cell_shape, marginal_adhesion, bland_chromatin, normal_nucleoli ]]))
     #print(pred)
-    return render_template('quec.html', predict=str(pred))
+    return render_template('index.html', predict=str(pred))
 if __name__ == '__main__':
     app.run(debug=True)

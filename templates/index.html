@@ -6,17 +6,17 @@
 <body>
 
 <p style="font-family:arial;">Enter the numeric values listed in your lab results to the corresponding names listed below.</p>
-<form>
+<form action="{{ url_for('predict')}}" method="POST">
 uniformity cell size:<br>
-<input> type="text"id="uniformity_cell_size" name="uniformity_cell_size"><br>
+<input type="text"id="uniformity_cell_size" name="uniformity_cell_size"><br>
 uniformity cell shape:<br>
-<input> type="text"id="uniformity_cell_shape" name="uniformity_cell_shape"><br>
+<input type="text"id="uniformity_cell_shape" name="uniformity_cell_shape"><br>
 marginal adhesion:<br>
-<input> type="text"id="marginal_adhesion" name="marginal_adhesion"><br>
+<input type="text"id="marginal_adhesion" name="marginal_adhesion"><br>
 bland chromatin:<br>
-<input> type="text"id="bland_chromatin" name="bland_chromatin"><br>
+<input type="text"id="bland_chromatin" name="bland_chromatin"><br>
 normal nucleoli:<br>
-<input> type="text"id="normal_nucleoli" name="normal_nucleoli"><br>
+<input type="text"id="normal_nucleoli" name="normal_nucleoli"><br>
 <input type="submit">
 </form>
 Your prediction:{{predict}}
