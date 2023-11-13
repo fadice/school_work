@@ -7,15 +7,15 @@
  <title>Predicting Red wine</title>
 <p style="font-family:arial;">Enter the numeric values listed on your bottle.</p>
 <form action="{{ url_for('predict')}}" method="POST">
-uniformity cell size:<br>
+fixed acidity:<br>
 <input type="number"id="fixed acidity" name="fixed acidity"><br>
-uniformity cell shape:<br>
+citric acid:<br>
 <input type="number"id="citric acid" name="citric acid"><br>
-marginal adhesion:<br>
+density:<br>
 <input type="number"id="density" name="density"><br>
-bland chromatin:<br>
+pH:<br>
 <input type="number"id="pH" name="pH"><br>
-normal nucleoli:<br>
+quality:<br>
 <input type="number"id="quality" name="quality"><br>
 <input type="submit">
 </form>
