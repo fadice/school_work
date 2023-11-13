@@ -2,21 +2,21 @@
 <html lang="en">
 <head>
  <meta charset="UTF-8">
- <title>Predicting Cancer</title>
-<body>
 
-<p style="font-family:arial;">Enter the numeric values listed in your lab results to the corresponding names listed below.</p>
+<body>
+ <title>Predicting Red wine</title>
+<p style="font-family:arial;">Enter the numeric values listed on your bottle.</p>
 <form action="{{ url_for('predict')}}" method="POST">
 uniformity cell size:<br>
-<input type="text"id="uniformity_cell_size" name="uniformity_cell_size"><br>
+<input type="number"id="fixed acidity" name="fixed acidity"><br>
 uniformity cell shape:<br>
-<input type="text"id="uniformity_cell_shape" name="uniformity_cell_shape"><br>
+<input type="number"id="citric acid" name="citric acid"><br>
 marginal adhesion:<br>
-<input type="text"id="marginal_adhesion" name="marginal_adhesion"><br>
+<input type="number"id="density" name="density"><br>
 bland chromatin:<br>
-<input type="text"id="bland_chromatin" name="bland_chromatin"><br>
+<input type="number"id="pH" name="pH"><br>
 normal nucleoli:<br>
-<input type="text"id="normal_nucleoli" name="normal_nucleoli"><br>
+<input type="number"id="quality" name="quality"><br>
 <input type="submit">
 </form>
 Your prediction:{{predict}}
