@@ -17,7 +17,7 @@ def predict():
     pH = request.form['pH']
     sulphates = request.form['sulphates']
     #quality= request.form['quality']
-    pred = model.predict(np.array([[fixed_acidity, citric_acid, density, pH, sulphates ]]))
+    pred = model.predict(np.array([[fixed_acidity, citric_acid, density, pH, sulphates ]]).astype(float))[0]
     #print(pred)
     return render_template('index.html', predict=str(pred))
 if __name__ == '__main__':
